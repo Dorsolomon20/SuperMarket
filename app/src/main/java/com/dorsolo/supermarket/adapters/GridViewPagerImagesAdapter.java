@@ -158,5 +158,4 @@ public class GridViewPagerImagesAdapter extends BaseAdapter<GridViewPagerImagesA
             pbLoading = itemView.findViewById(R.id.pbLoading);
         }
     }
-
 }

@@ -8,7 +8,7 @@
     <color name="lightGray">#f7f4f4</color>
     <color name="darkGray">#aaaaaa</color>
     <color name="transparent">#00000000</color>
-    <color name="first_timer_first_slider_background">#dd40da32</color>
-    <color name="first_timer_second_slider_background">#559aef</color>
-    <color name="first_timer_third_slider_background">#fca235</color>
+    <color name="first_slider_background">#dd40da32</color>
+    <color name="second_slider_background">#559aef</color>
+    <color name="third_slider_background">#fca235</color>
 </resources>

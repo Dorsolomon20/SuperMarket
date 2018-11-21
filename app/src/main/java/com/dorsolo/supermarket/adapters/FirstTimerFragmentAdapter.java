@@ -22,11 +22,14 @@ public class FirstTimerFragmentAdapter extends FragmentStatePagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                return FirstTimerSliderFragment.getInstance(R.color.first_timer_first_slider_background, R.string.first_slider_title, R.string.first_slider_description);
+                return FirstTimerSliderFragment.getInstance(R.color.first_slider_background,
+                        R.string.first_slider_title, R.string.first_slider_description);
             case 1:
-                return FirstTimerSliderFragment.getInstance(R.color.first_timer_second_slider_background, R.string.second_slider_title, R.string.second_slider_description);
+                return FirstTimerSliderFragment.getInstance(R.color.second_slider_background,
+                        R.string.second_slider_title, R.string.second_slider_description);
             default:
-                return FirstTimerSliderFragment.getInstance(R.color.first_timer_third_slider_background, R.string.third_slider_title, R.string.third_slider_description);
+                return FirstTimerSliderFragment.getInstance(R.color.third_slider_background,
+                        R.string.third_slider_title, R.string.third_slider_description);
         }
     }
 

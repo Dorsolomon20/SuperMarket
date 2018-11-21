@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--Profile preferences-->
+    <PreferenceCategory
+        android:key="@string/profile_settings"
+        android:title="@string/account_settings">
+
+        <!--Profile Username-->
+        <EditTextPreference
+            android:dialogMessage="@string/edit_username_msg"
+            android:dialogTitle="@string/edit_username"
+            android:inputType="textPersonName|textNoSuggestions"
+            android:key="@string/key_username"
+            android:title="@string/username" />
+
+        <!--Profile Phone Number-->
+        <EditTextPreference
+            android:dialogMessage="@string/edit_phone_number_msg"
+            android:dialogTitle="@string/edit_phone_number"
+            android:inputType="number|textNoSuggestions"
+            android:key="@string/key_phone_number"
+            android:title="@string/phone_number" />
+
+        <!--Exit account-->
+        <Preference
+            android:key="@string/key_exit"
+            android:summary="@string/exit_account_msg"
+            android:title="@string/exit_account" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

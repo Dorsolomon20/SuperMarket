@@ -1,0 +1,56 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--Default attributes for Text-->
+    <style name="DefaultText">
+        <item name="android:textStyle">italic|bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--Style for large text such as titles-->
+    <style name="MainLargeText" parent="DefaultText">
+        <item name="android:textSize">@dimen/large_text_size</item>
+    </style>
+
+    <!--Style for medium text such as titles-->
+    <style name="MainMidText" parent="DefaultText">
+        <item name="android:textSize">@dimen/mid_text_size</item>
+    </style>
+
+    <!--Style for small text such as titles-->
+    <style name="MainMinText" parent="DefaultText">
+        <item name="android:textSize">@dimen/min_text_size</item>
+    </style>
+
+    <!--Style for common editText-->
+    <style name="MainEditText" parent="DefaultText">
+        <item name="android:textSize">@dimen/edit_text_size</item>
+        <item name="android:drawablePadding">@dimen/edit_text_drawable_padding</item>
+        <item name="android:textColorHint">@color/black</item>
+    </style>
+
+    <!--Default attributes for RecyclerView-->
+    <style name="recyclerViewDefault">
+        <item name="android:orientation">vertical</item>
+        <item name="android:scrollbars">vertical</item>
+        <item name="android:scrollbarStyle">insideOverlay</item>
+        <item name="android:scrollbarSize">@dimen/recycler_bar_size</item>
+    </style>
+
+    <!--Default style for TabLayout-->
+    <style name="tabStyle" />
+
+    <!--Default style for CardView-->
+    <style name="cardStyle" parent="Base.CardView">
+        <item name="android:layout_margin">@dimen/card_margin</item>
+        <item name="cardCornerRadius">@dimen/card_corner_radius</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+    </style>
+
+</resources>

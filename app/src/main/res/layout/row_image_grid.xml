@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--ImageView - contain an image for the RecyclerView with the GridLayoutManager-->
+    <ImageView
+        android:id="@+id/imgGrid"
+        android:layout_width="@dimen/image_grid_img_width"
+        android:layout_height="@dimen/image_grid_img_height"
+        android:layout_margin="@dimen/image_grid_img_margin"
+        android:contentDescription="@string/image_view_for_a_grid_recycler_view_format"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

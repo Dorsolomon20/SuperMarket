@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/cardStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/image_linear_constraint_margin">
+
+        <TextView
+            android:id="@+id/lblImgTitle"
+            style="@style/MainMinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/imgProfileLinearRecycler"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--ImageView - contains the Image obj image-->
+        <ImageView
+            android:id="@+id/imgProfileLinearRecycler"
+            android:layout_width="@dimen/image_linear_img_width"
+            android:layout_height="@dimen/image_linear_img_height"
+            android:layout_marginTop="@dimen/image_linear_img_margin_top"
+            android:layout_marginBottom="@dimen/image_linear_img_margin_bottom"
+            android:contentDescription="@string/image_view_for_a_linear_recycler_view_format"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/lblImgDescription"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lblImgTitle" />
+
+        <!--TextView - Image description-->
+        <TextView
+            android:id="@+id/lblImgDescription"
+            style="@style/MainMinText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.05"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgProfileLinearRecycler" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--GuidLine - Start guild line for the title and description of the image-->
+    <android.support.constraint.Guideline
+        android:id="@+id/lblStartGuidLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <!--TextView - Image title-->
+    <TextView
+        android:id="@+id/lblImgTitle"
+        style="@style/MainMidText"
+        android:layout_width="@dimen/image_display_title_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/imgLargeContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/lblStartGuidLine"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--ImageView - display the selected image from the GridViewPagerImages-->
+    <ImageView
+        android:id="@+id/imgLargeContainer"
+        android:layout_width="@dimen/image_display_img_width"
+        android:layout_height="@dimen/image_display_img_height"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/img_large_container_desc"
+        android:transitionName="@string/image_display_transition_container"
+        app:layout_constraintBottom_toTopOf="@id/lblImgDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lblImgTitle" />
+
+    <!--TextView - Image description-->
+    <TextView
+        android:id="@+id/lblImgDescription"
+        style="@style/MainMidText"
+        android:layout_width="@dimen/image_display_desc_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/lblStartGuidLine"
+        app:layout_constraintTop_toBottomOf="@id/imgLargeContainer" />
+
+</android.support.constraint.ConstraintLayout>

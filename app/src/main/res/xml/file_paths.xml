@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+
+    <external-path
+        name="user_captured_images"
+        path="Android/data/com.dorsolo.supermarket/files/Pictures" />
+
+</paths>

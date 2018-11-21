@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <!--Including the ToolBar layout-->
+                <include
+                    android:id="@+id/topToolbar"
+                    layout="@layout/toolbar"
+                    android:layout_width="@dimen/home_include_tool_bar_width"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/imgProfile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!--GuidLine - Start-->
+                <android.support.constraint.Guideline
+                    android:id="@+id/startGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.05" />
+
+                <!--GuidLine - End-->
+                <android.support.constraint.Guideline
+                    android:id="@+id/endGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.95" />
+
+                <!--GuidLine - Divider between the profile image and everything to it's right-->
+                <android.support.constraint.Guideline
+                    android:id="@+id/middleGuideLine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.25" />
+
+                <!--ImageView - Profile image-->
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="@dimen/home_profile_img_width"
+                    android:layout_height="@dimen/home_profile_img_height"
+                    android:layout_marginTop="@dimen/home_profile_img_margin_top"
+                    android:contentDescription="@string/profile_image_of_the_logged_account"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_person_add"
+                    app:layout_constraintBottom_toTopOf="@id/lblProfileName"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toStartOf="@id/middleGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@id/topToolbar" />
+
+                <!--TextView - Profile username-->
+                <TextView
+                    android:id="@+id/lblProfileName"
+                    style="@style/MainMidText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="@integer/username_max_length"
+                    app:layout_constraintBottom_toTopOf="@id/lblPhoneNumber"
+                    app:layout_constraintEnd_toStartOf="@id/middleGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@id/imgProfile" />
+
+                <!--TextView - Profile phone number-->
+                <TextView
+                    android:id="@+id/lblPhoneNumber"
+                    style="@style/MainMinText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLength="@integer/phone_number_max_length"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintEnd_toStartOf="@id/middleGuideLine"
+                    app:layout_constraintStart_toStartOf="@id/startGuideLine"
+                    app:layout_constraintTop_toBottomOf="@id/lblProfileName" />
+
+                <!--TextView - Number of products-->
+                <TextView
+                    android:id="@+id/lblNumOfProducts"
+                    style="@style/MainMidText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/lblNumOfProductsDesc"
+                    app:layout_constraintEnd_toStartOf="@id/lblNumOfProductsDesc"
+                    app:layout_constraintStart_toEndOf="@id/lblNumOfProductsDesc"
+                    app:layout_constraintTop_toTopOf="@id/imgProfile" />
+
+                <!--TextView - Title for the number of products-->
+                <TextView
+                    android:id="@+id/lblNumOfProductsDesc"
+                    style="@style/MainMidText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/products"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toEndOf="@id/imgProfile"
+                    app:layout_constraintTop_toBottomOf="@id/lblNumOfProducts" />
+
+                <!--Button - Launches the SettingsFragment to customize the account and profile information-->
+                <Button
+                    android:id="@+id/btnProfileSettings"
+                    style="@style/MainMinText"
+                    android:layout_width="@dimen/home_btn_settings_width"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/home_btn_settings_margin_top"
+                    android:background="@drawable/credentials_edit_text_background"
+                    android:text="@string/settings"
+                    app:layout_constraintBottom_toTopOf="@id/tabImagesMode"
+                    app:layout_constraintEnd_toEndOf="@id/endGuideLine"
+                    app:layout_constraintStart_toEndOf="@id/middleGuideLine"
+                    app:layout_constraintTop_toBottomOf="@id/lblNumOfProductsDesc" />
+
+                <!--TabLayout - For switching between the viewPager fragments-->
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabImagesMode"
+                    android:layout_width="@dimen/home_tab_layout_width"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/home_tab_layout_margin_top"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/lblPhoneNumber"
+                    app:tabMode="fixed" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!--ViewPager - Holds the fragment that display the profile images in two different layouts, Grid and Linear-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPagerImages"
+            android:layout_width="@dimen/home_view_pager_width"
+            android:layout_height="@dimen/home_view_pager_height"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--ImageView - Indicating to the user that he hasn't posted any products yet-->
+        <ImageView
+            android:id="@+id/imgNoPostsYet"
+            android:layout_width="@dimen/home_no_posts_yet_width"
+            android:layout_height="@dimen/home_no_posts_yet_height"
+            android:layout_marginBottom="?attr/actionBarSize"
+            android:contentDescription="@string/img_no_posts_yet_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/no_posts_yet"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

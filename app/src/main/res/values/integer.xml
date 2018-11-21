@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Basic integers-->
+    <integer name="zero">0</integer>
+    <integer name="one">1</integer>
+
+    <!--Animation durations-->
+    <integer name="min_duration">500</integer>
+    <integer name="mid_duration">700</integer>
+    <integer name="max_duration">1000</integer>
+
+    <!--Degrees-->
+    <integer name="ninety_degrees">90</integer>
+
+    <!--Lengths-->
+    <integer name="username_max_length">10</integer>
+    <integer name="phone_number_max_length">15</integer>
+    <integer name="img_title_max_length">255</integer>
+    <integer name="img_description_max_length">500</integer>
+
+</resources>

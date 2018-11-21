@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--activity_main.xml-->
+    <dimen name="fragment_container_width">0dp</dimen>
+    <dimen name="fragment_container_height">0dp</dimen>
+    <!--dialog_image_source.xml-->
+    <dimen name="dialog_image_source_title_width">0dp</dimen>
+    <dimen name="dialog_image_source_title_size">30sp</dimen>
+    <dimen name="dialog_image_source_width">0dp</dimen>
+    <dimen name="dialog_image_source_divider_width">0dp</dimen>
+    <dimen name="dialog_image_source_divider_height">1dp</dimen>
+    <!--fragment_credentials.xml-->
+    <dimen name="credentials_background_width">0dp</dimen>
+    <dimen name="credentials_background_height">0dp</dimen>
+    <dimen name="credentials_tab_layout_width">0dp</dimen>
+    <dimen name="credentials_text_input_layout">0dp</dimen>
+    <dimen name="credentials_btn_submit_width">0dp</dimen>
+    <!--fragment_first_timer_slider.xml-->
+    <dimen name="slider_img_width">0dp</dimen>
+    <dimen name="slider_img_height">0dp</dimen>
+    <!--fragment_first_timer.xml-->
+    <dimen name="first_timer_view_pager_width">0dp</dimen>
+    <dimen name="first_timer_view_pager_height">0dp</dimen>
+    <dimen name="first_timer_tab_layout_width">0dp</dimen>
+    <!--fragment_home.xml-->
+    <dimen name="home_include_tool_bar_width">0dp</dimen>
+    <dimen name="home_profile_img_width">0dp</dimen>
+    <dimen name="home_profile_img_height">0dp</dimen>
+    <dimen name="home_profile_img_margin_top">5dp</dimen>
+    <dimen name="home_btn_settings_width">0dp</dimen>
+    <dimen name="home_btn_settings_margin_top">5dp</dimen>
+    <dimen name="home_tab_layout_width">0dp</dimen>
+    <dimen name="home_tab_layout_margin_top">5dp</dimen>
+    <dimen name="home_view_pager_width">0dp</dimen>
+    <dimen name="home_view_pager_height">0dp</dimen>
+    <dimen name="home_no_posts_yet_width">0dp</dimen>
+    <dimen name="home_no_posts_yet_height">0dp</dimen>
+    <!--fragment_image_display.xml-->
+    <dimen name="image_display_title_width">0dp</dimen>
+    <dimen name="image_display_img_width">0dp</dimen>
+    <dimen name="image_display_img_height">0dp</dimen>
+    <dimen name="image_display_desc_width">0dp</dimen>
+    <!--fragment_post.xml-->
+    <dimen name="post_edit_title_width">0dp</dimen>
+    <dimen name="post_img_width">0dp</dimen>
+    <dimen name="post_img_height">0dp</dimen>
+    <dimen name="post_edit_desc_width">0dp</dimen>
+    <dimen name="post_btn_post_img_width">0dp</dimen>
+    <!--fragment_recycler_view_pager.xml-->
+    <dimen name="recycler_width">0dp</dimen>
+    <dimen name="recycler_height">0dp</dimen>
+    <!--row_image_grid.xml-->
+    <dimen name="image_grid_img_width">0dp</dimen>
+    <dimen name="image_grid_img_height">0dp</dimen>
+    <dimen name="image_grid_img_margin">3dp</dimen>
+    <!--row_image_linear.xml-->
+    <dimen name="image_linear_constraint_margin">10dp</dimen>
+    <dimen name="image_linear_img_width">0dp</dimen>
+    <dimen name="image_linear_img_height">0dp</dimen>
+    <dimen name="image_linear_img_margin_top">10dp</dimen>
+    <dimen name="image_linear_img_margin_bottom">10dp</dimen>
+    <!--styles.xml-->
+    <dimen name="large_text_size">22sp</dimen>
+    <dimen name="mid_text_size">17sp</dimen>
+    <dimen name="min_text_size">14sp</dimen>
+    <dimen name="edit_text_size">17sp</dimen>
+    <dimen name="edit_text_drawable_padding">15dp</dimen>
+    <dimen name="recycler_bar_size">3dp</dimen>
+    <dimen name="card_margin">10dp</dimen>
+    <dimen name="card_corner_radius">15dp</dimen>
+    <dimen name="card_elevation">8dp</dimen>
+    <!--toolbar.xml-->
+    <dimen name="toolbar_width">0dp</dimen>
+    <dimen name="toolbar_text_size">15sp</dimen>
+    <!--progressBar-->
+    <dimen name="pb_width">0dp</dimen>
+    <dimen name="pb_height">0dp</dimen>
+</resources>

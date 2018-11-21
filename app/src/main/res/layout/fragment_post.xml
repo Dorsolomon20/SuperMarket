@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--EditText - Receive input from the user about the title of the image-->
+    <EditText
+        android:id="@+id/txtImgTitle"
+        style="@style/MainMidText"
+        android:layout_width="@dimen/post_edit_title_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/credentials_edit_text_background"
+        android:hint="@string/title"
+        android:imeOptions="actionNext"
+        android:inputType="textShortMessage|textNoSuggestions"
+        android:maxLength="@integer/img_title_max_length"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/imgSelected"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill" />
+
+    <!--ImageView - Holds the captured image by the user from the camera or the gallery-->
+    <ImageView
+        android:id="@+id/imgSelected"
+        android:layout_width="@dimen/post_img_width"
+        android:layout_height="@dimen/post_img_height"
+        android:background="@drawable/post_image_view_background"
+        android:contentDescription="@string/fragment_post_image_view_desc"
+        android:src="@drawable/ic_camera"
+        app:layout_constraintBottom_toTopOf="@id/txtImgDescription"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtImgTitle" />
+
+    <!--EditText - Receive input from the user about the description of the image-->
+    <EditText
+        android:id="@+id/txtImgDescription"
+        style="@style/MainMidText"
+        android:layout_width="@dimen/post_edit_desc_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/credentials_edit_text_background"
+        android:hint="@string/description"
+        android:imeOptions="actionDone"
+        android:inputType="textLongMessage|textNoSuggestions"
+        android:maxLength="@integer/img_description_max_length"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/btnPostImg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgSelected"
+        tools:ignore="Autofill" />
+
+    <!--Button - Post the image with the provided information-->
+    <Button
+        android:id="@+id/btnPostImg"
+        style="@style/MainLargeText"
+        android:layout_width="@dimen/post_btn_post_img_width"
+        android:layout_height="wrap_content"
+        android:background="@drawable/credentials_btn_background"
+        android:text="@string/post"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtImgDescription" />
+
+    <!--ProgressBar - Indicate to the user about the image posting process underway-->
+    <ProgressBar
+        android:id="@+id/pbPostingImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
